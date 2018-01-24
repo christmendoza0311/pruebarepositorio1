@@ -1,0 +1,26 @@
+﻿@using _4._3Ventas;
+@using _4._0Comunes;
+@{
+    ViewBag.Title = "Bienvenida";
+    Layout = "~/Views/Shared/_LayoutExtranet.cshtml";
+}
+
+<p style="color:blue">Bienvenido</p>
+@{
+    entCliente c = (entCliente)Session["cliente"];
+    
+    <br />
+    <table>
+        <tr>
+            <td>Cliente:</td>
+            <td>@c.Persona.Nombres @c.Persona.Apellidos</td>
+        </tr>
+        <tr>
+            <td>Usuario:</td>
+            <td>@c.Usuario</td>
+        </tr>
+    </table>
+}
+<p>Si desea cambiar sus datos haga click 
+    <a href="@Url.Action("CambiarDatos")">Aquí</a>
+</p>

@@ -1,0 +1,59 @@
+﻿@using _4._2Logistica;
+@using _4._3Ventas;
+@{
+    ViewBag.Title = "VerCarrito";
+    Layout = "~/Views/Shared/_LayoutExtranet.cshtml";
+}
+
+<h2>VerCarrito</h2>
+
+@{
+    List<entVentaDet> lista = (List<entVentaDet>)Session["carrito"];
+    if (Session["carrito"] == null) { 
+        return;
+    }
+    int i = 0;
+    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+        <thead>
+            <tr>
+                <th>N°</th>
+                <th></th>
+                <th>Articulo</th>
+                <th>Tipo</th>
+                <th>Cantidad</th>
+                <th>Precio</th>
+                <th>Importe</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var d in lista)
+            {
+                i++;
+                Decimal importe = d.Cantidad * d.Precio;
+                <tr>
+                    <td>@i</td>
+                    <td><img style="width: 30px; height: 30px" src="~/recursos/imgProductos/Productos/@d.Articulo.Imagen" /></td>
+                    <td>@d.Articulo.Nombre</td>
+                    <td>@d.Articulo.TipoArticulo.Descripcion</td>
+                    <td>@d.Cantidad</td>
+                    <td>@d.Precio</td>
+                    <td>@importe</td>
+                    <td><a href="">Quitar</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+<br />
+<input type="button" id="btnOpcionesPago" value="Guardar Pedido" />
+<div id="OpcionesdePago">
+
+</div>
+@section misscripts{
+<script type="text/javascript">
+    $('#btnOpcionesPago').click(function () {
+        $('#OpcionesdePago').load('@Url.Action("OpcionPago","Carrito")')
+    });
+</script>
+}

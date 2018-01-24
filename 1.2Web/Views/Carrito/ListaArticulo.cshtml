@@ -1,0 +1,46 @@
+﻿@using _4._2Logistica
+@using _3._2Logistica
+
+@{
+    ViewBag.Title = "ListaArticulo";
+    Layout = "~/Views/Shared/_LayoutExtranet.cshtml";
+}
+
+<table>
+    @{
+        int celdas=0;
+        foreach (entArticulo x in (List<entArticulo>)ViewBag.lista)
+        {
+            if (celdas == 0) { 
+                <tr></tr>
+            }
+            celdas++;
+            <td align="center" width="25%">
+                <img style="width: 160px; height: 160px"
+                     src="~/recursos/imgProductos/Productos/@x.Imagen" />
+                <p style="color:GrayText">@x.Nombre</p>
+
+                @if (Session["cliente"] != null)
+                {
+                <form method="post" action="AgregarCarrito">
+                    <p style="color:gray; font-family:Arial;font-size:12px">@x.Precio</p>
+                    <input type="text" name="txtCant" value="1" style="width:30px">
+                    <input type="submit" name="btnAgrega" value="Comprar" style="width:70px;background-color:azure">
+                    <input type="hidden" name="idArticulo" value="@x.idArticulo" />
+                    <input type="hidden" name="DArticulo" value="@x.Nombre" />
+                    <input type="hidden" name="Imagen" value="@x.Imagen" />
+                    <input type="hidden" name="Precio" value="@x.Precio" />
+                    <input type="hidden" name="Categoria" value="@x.TipoArticulo.Descripcion" />
+
+                </form>
+
+                }
+            </td>
+            if (celdas == 4)
+            {
+                <tr></tr>
+                celdas = 0;
+            }
+        }
+    }
+</table>

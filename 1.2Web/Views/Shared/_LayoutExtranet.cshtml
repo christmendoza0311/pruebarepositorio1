@@ -1,0 +1,93 @@
+﻿@using _4._2Logistica
+@using _3._2Logistica
+
+<!DOCTYPE html>
+<link href="~/recursos/Extranet/Estilos/style.css" rel="stylesheet" />
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+    <script src="~/Scripts/jquery-ui.js"></script>
+    <link href="~/Scripts/jquery-ui.css" rel="stylesheet" />
+    <script type="text/javascript">
+        $(function () {
+            $("#Login").dialog({
+                autoOpen: false,
+                show: { effect: "blind", duration: 1000 },
+                hide: { effect: "explode", duration: 1000 },
+                resizable: false,
+                height: 160,
+                modal:true
+            });
+            $("#btnLogin").click(function () {
+                $("#Login").dialog("open");
+            });
+        })
+    </script>
+</head>
+<body>
+    <div id="Login" title="Login">
+        <form method="post" action="/Carrito/VerificarAcceso">
+            <table>
+                <tr>
+                    <td>Usuario:</td>
+                    <td><input type="text" name="txtUsuario" /></td>
+                </tr>
+                <tr>
+                    <td>Password:</td>
+                    <td><input type="password" name="txtPassword" /></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <input type="submit" value="Ingresar" />
+                        <input type="reset" value="Limpiar" />
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+    <div id="header"></div>
+    <div id="wrapper">
+        <div id="menu">
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#" id="btnLogin">Login</a></li>
+                <li><a href="@Url.Action("VerCarrito", "Carrito")">Carrito</a></li>
+                <li><a href="#">Datos</a></li>
+                <li><a href="@Url.Action("Login", "Intranet")">Intranet</a></li>
+            </ul>
+        </div>
+        <div id="search">
+            <input type="text" id="search-text"/>
+        </div>
+    </div>
+    <div id="page" >
+        <div id="sidebar">
+            <ul>
+                @foreach (entTipoArticulo x in
+                            logTipoArticulo.Instancia.ListarTipoArticulos()) { 
+                    <li>@Html.ActionLink(x.Descripcion, "ListaArticulo", "Carrito", new{ idTipo = x.idTipoArticulo}, null)</li>
+                }
+            </ul>
+        </div>
+        <div id="content">
+            @RenderBody()
+        </div>
+        <div style="clear:both"></div>
+    </div>
+    <div id="footer-menu">
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Login</a></li>
+            <li><a href="@Url.Action("VerCarrito", "Carrito")">Carrito</a></li>
+            <li><a href="#">Datos</a></li>
+            <li><a href="@Url.Action("Login", "Intranet")">Intranet</a></li>
+        </ul>
+    </div>
+    <div id="footer"><p><a href="www.upn.edu.pe">UPN</a> - Derechos reservados</p></div>
+    
+    @RenderSection("misscripts",required:false)
+</body>
+</html>

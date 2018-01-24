@@ -1,0 +1,32 @@
+﻿<h3>Opciones de Pago</h3>
+<form method="post">
+    TipoTarjeta: <select name="cboTipoTarjeta">
+        <option value="1">VISA</option>
+        <option value="2">MasterCard</option>
+        <option value="3">American Express</option>
+        <option value="4">Dinners</option>
+    </select>
+    <br />
+    <p>Direccion de Entrega</p>
+    <input type="text" name="txtDireccion" /><br />
+    Departamento:
+    @Html.DropDownList("Departamento", (SelectList)ViewBag.ListaDep, "<Seleccionar>", new { id="cboDepartamento" })
+    <br />
+    Provincia:<select id="cboProvincia"></select>
+</form>
+
+<script type="text/javascript">
+    $('#cboDepartamento').change(function () {
+        cargarprovincias();
+    })
+    var cargarprovincias = function () {
+        $.getJSON('@Url.Action("LlenarProvinciasJSON","Carrito")', {idDepartamento : $('#cboDepartamento').val()},
+        function (data) {
+            var opcion = '<option value="0">Seleccionar</option>'
+            $.each(data, function (i, item) {
+                opcion += '<option value="'+item.idUbigeo+'">'+item.Nombre+'</option>'
+            });
+            $('#cboProvincia').html(opcion);
+        })
+    }
+</script>

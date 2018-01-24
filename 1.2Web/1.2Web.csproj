@@ -1,0 +1,334 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{97D1EF45-4C54-4D45-87B5-DFA544679A8C}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>_1._2Web</RootNamespace>
+    <AssemblyName>1.2Web</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.0.0\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.0.0\lib\net45\System.Web.Webpages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Deployment">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.0.0\lib\net45\System.Web.Webpages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.0.0\lib\net45\System.Web.Webpages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.0.0\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.0.0\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Bootsrap\css\sb-admin.css" />
+    <Content Include="Bootsrap\css\sb-admin.min.css" />
+    <Content Include="Bootsrap\js\sb-admin-charts.js" />
+    <Content Include="Bootsrap\js\sb-admin-charts.min.js" />
+    <Content Include="Bootsrap\js\sb-admin-datatables.js" />
+    <Content Include="Bootsrap\js\sb-admin-datatables.min.js" />
+    <Content Include="Bootsrap\js\sb-admin.js" />
+    <Content Include="Bootsrap\js\sb-admin.min.js" />
+    <Content Include="Bootsrap\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="Bootsrap\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="Bootsrap\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="Bootsrap\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="Bootsrap\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="Bootsrap\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Bootsrap\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="Bootsrap\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Bootsrap\vendor\chart.js\Chart.bundle.js" />
+    <Content Include="Bootsrap\vendor\chart.js\Chart.bundle.min.js" />
+    <Content Include="Bootsrap\vendor\chart.js\Chart.js" />
+    <Content Include="Bootsrap\vendor\chart.js\Chart.min.js" />
+    <Content Include="Bootsrap\vendor\datatables\dataTables.bootstrap4.css" />
+    <Content Include="Bootsrap\vendor\datatables\dataTables.bootstrap4.js" />
+    <Content Include="Bootsrap\vendor\datatables\jquery.dataTables.js" />
+    <Content Include="Bootsrap\vendor\font-awesome\css\font-awesome.css" />
+    <Content Include="Bootsrap\vendor\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Bootsrap\vendor\jquery-easing\jquery.easing.compatibility.js" />
+    <Content Include="Bootsrap\vendor\jquery-easing\jquery.easing.js" />
+    <Content Include="Bootsrap\vendor\jquery-easing\jquery.easing.min.js" />
+    <Content Include="Bootsrap\vendor\jquery\jquery.js" />
+    <Content Include="Bootsrap\vendor\jquery\jquery.min.js" />
+    <Content Include="Bootsrap\vendor\popper\popper.js" />
+    <Content Include="Bootsrap\vendor\popper\popper.min.js" />
+    <Content Include="Global.asax" />
+    <Content Include="recursos\Extranet\Estilos\images\banner.jpg" />
+    <Content Include="recursos\Extranet\Estilos\images\img02.jpg" />
+    <Content Include="recursos\Extranet\Estilos\images\img03.jpg" />
+    <Content Include="recursos\Extranet\Estilos\images\img04.jpg" />
+    <Content Include="recursos\Extranet\Estilos\style.css" />
+    <Content Include="recursos\Extranet\Imagenes\img01.png" />
+    <Content Include="recursos\Extranet\Imagenes\img02.png" />
+    <Content Include="recursos\Extranet\Imagenes\img03.png" />
+    <Content Include="recursos\Extranet\Imagenes\marcas\a1.jpg" />
+    <Content Include="recursos\Extranet\Imagenes\marcas\banner-airboom.jpg" />
+    <Content Include="recursos\Extranet\Imagenes\marcas\banner-astrom.jpg" />
+    <Content Include="recursos\Extranet\Imagenes\marcas\banner-cybertel.jpg" />
+    <Content Include="recursos\Extranet\Imagenes\marcas\banner-hacker.jpg" />
+    <Content Include="recursos\Extranet\Imagenes\marcas\banner-maxtron.jpg" />
+    <Content Include="recursos\Extranet\Imagenes\marcas\banner-newton.jpg" />
+    <Content Include="recursos\Extranet\Imagenes\marcas\banner-pasollini.jpg" />
+    <Content Include="recursos\Extranet\Imagenes\marcas\banner-powerlite.jpg" />
+    <Content Include="recursos\Extranet\Imagenes\marcas\banner-sigma.jpg" />
+    <Content Include="recursos\imgProductos\detproducto\Thumbs.db" />
+    <Content Include="recursos\imgProductos\Productos\Thumbs.db" />
+    <Content Include="Bootsrap\vendor\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Bootsrap\vendor\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Bootsrap\vendor\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Bootsrap\vendor\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Bootsrap\vendor\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Bootsrap\vendor\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="Bootsrap\vendor\font-awesome\less\animated.less" />
+    <Content Include="Bootsrap\vendor\font-awesome\less\bordered-pulled.less" />
+    <Content Include="Bootsrap\vendor\font-awesome\less\core.less" />
+    <Content Include="Bootsrap\vendor\font-awesome\less\fixed-width.less" />
+    <Content Include="Bootsrap\vendor\font-awesome\less\font-awesome.less" />
+    <Content Include="Bootsrap\vendor\font-awesome\less\icons.less" />
+    <Content Include="Bootsrap\vendor\font-awesome\less\larger.less" />
+    <Content Include="Bootsrap\vendor\font-awesome\less\list.less" />
+    <Content Include="Bootsrap\vendor\font-awesome\less\mixins.less" />
+    <Content Include="Bootsrap\vendor\font-awesome\less\path.less" />
+    <Content Include="Bootsrap\vendor\font-awesome\less\rotated-flipped.less" />
+    <Content Include="Bootsrap\vendor\font-awesome\less\screen-reader.less" />
+    <Content Include="Bootsrap\vendor\font-awesome\less\stacked.less" />
+    <Content Include="Bootsrap\vendor\font-awesome\less\variables.less" />
+    <Content Include="Bootsrap\vendor\font-awesome\scss\font-awesome.scss" />
+    <Content Include="Bootsrap\vendor\font-awesome\scss\_animated.scss" />
+    <Content Include="Bootsrap\vendor\font-awesome\scss\_bordered-pulled.scss" />
+    <Content Include="Bootsrap\vendor\font-awesome\scss\_core.scss" />
+    <Content Include="Bootsrap\vendor\font-awesome\scss\_fixed-width.scss" />
+    <Content Include="Bootsrap\vendor\font-awesome\scss\_icons.scss" />
+    <Content Include="Bootsrap\vendor\font-awesome\scss\_larger.scss" />
+    <Content Include="Bootsrap\vendor\font-awesome\scss\_list.scss" />
+    <Content Include="Bootsrap\vendor\font-awesome\scss\_mixins.scss" />
+    <Content Include="Bootsrap\vendor\font-awesome\scss\_path.scss" />
+    <Content Include="Bootsrap\vendor\font-awesome\scss\_rotated-flipped.scss" />
+    <Content Include="Bootsrap\vendor\font-awesome\scss\_screen-reader.scss" />
+    <Content Include="Bootsrap\vendor\font-awesome\scss\_stacked.scss" />
+    <Content Include="Bootsrap\vendor\font-awesome\scss\_variables.scss" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="recursos\imagenes\error.png" />
+    <Content Include="recursos\imgProductos\detproducto\1.jpg" />
+    <Content Include="recursos\imgProductos\detproducto\10.jpg" />
+    <Content Include="recursos\imgProductos\detproducto\11.jpg" />
+    <Content Include="recursos\imgProductos\detproducto\12.jpg" />
+    <Content Include="recursos\imgProductos\detproducto\13.jpg" />
+    <Content Include="recursos\imgProductos\detproducto\14.jpg" />
+    <Content Include="recursos\imgProductos\detproducto\15.jpg" />
+    <Content Include="recursos\imgProductos\detproducto\16.jpg" />
+    <Content Include="recursos\imgProductos\detproducto\17.jpg" />
+    <Content Include="recursos\imgProductos\detproducto\18.jpg" />
+    <Content Include="recursos\imgProductos\detproducto\19.jpg" />
+    <Content Include="recursos\imgProductos\detproducto\2.jpg" />
+    <Content Include="recursos\imgProductos\detproducto\20.jpg" />
+    <Content Include="recursos\imgProductos\detproducto\21.jpg" />
+    <Content Include="recursos\imgProductos\detproducto\3.jpg" />
+    <Content Include="recursos\imgProductos\detproducto\4.jpg" />
+    <Content Include="recursos\imgProductos\detproducto\5.jpg" />
+    <Content Include="recursos\imgProductos\detproducto\6.jpg" />
+    <Content Include="recursos\imgProductos\detproducto\7.jpg" />
+    <Content Include="recursos\imgProductos\detproducto\8.jpg" />
+    <Content Include="recursos\imgProductos\detproducto\9.jpg" />
+    <Content Include="recursos\imgProductos\Productos\1.jpg" />
+    <Content Include="recursos\imgProductos\Productos\10.jpg" />
+    <Content Include="recursos\imgProductos\Productos\11.jpg" />
+    <Content Include="recursos\imgProductos\Productos\12.jpg" />
+    <Content Include="recursos\imgProductos\Productos\13.jpg" />
+    <Content Include="recursos\imgProductos\Productos\14.jpg" />
+    <Content Include="recursos\imgProductos\Productos\15.jpg" />
+    <Content Include="recursos\imgProductos\Productos\16.jpg" />
+    <Content Include="recursos\imgProductos\Productos\17.jpg" />
+    <Content Include="recursos\imgProductos\Productos\18.jpg" />
+    <Content Include="recursos\imgProductos\Productos\19.jpg" />
+    <Content Include="recursos\imgProductos\Productos\2.jpg" />
+    <Content Include="recursos\imgProductos\Productos\20.jpg" />
+    <Content Include="recursos\imgProductos\Productos\21.jpg" />
+    <Content Include="recursos\imgProductos\Productos\3.jpg" />
+    <Content Include="recursos\imgProductos\Productos\4.jpg" />
+    <Content Include="recursos\imgProductos\Productos\5.jpg" />
+    <Content Include="recursos\imgProductos\Productos\6.jpg" />
+    <Content Include="recursos\imgProductos\Productos\7.jpg" />
+    <Content Include="recursos\imgProductos\Productos\8.jpg" />
+    <Content Include="recursos\imgProductos\Productos\9.jpg" />
+    <Content Include="recursos\imgProductos\Productos\Koala.jpg" />
+    <Content Include="recursos\imgProductos\Productos\Penguins.jpg" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-ui.css" />
+    <Content Include="Scripts\jquery-ui.js" />
+    <Content Include="Scripts\jquery-ui.min.css" />
+    <Content Include="Scripts\jquery-ui.min.js" />
+    <Content Include="Scripts\jquery-ui.structure.css" />
+    <Content Include="Scripts\jquery-ui.structure.min.css" />
+    <Content Include="Scripts\jquery-ui.theme.css" />
+    <Content Include="Scripts\jquery-ui.theme.min.css" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Web.config" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Inicio\Index.cshtml" />
+    <Content Include="Views\Intranet\Login.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\ArticuloController.cs" />
+    <Compile Include="Controllers\CarritoController.cs" />
+    <Compile Include="Controllers\ErrorController.cs" />
+    <Compile Include="Controllers\InicioController.cs" />
+    <Compile Include="Controllers\IntranetController.cs" />
+    <Compile Include="Filtros\SesionExtranetAttribute.cs" />
+    <Compile Include="Filtros\SesionIntranetAttribute.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\web.config" />
+    <Content Include="packages.config" />
+    <Content Include="Views\Intranet\MenuPrincipal.cshtml" />
+    <Content Include="Views\Error\Index.cshtml" />
+    <Content Include="Views\Articulo\Lista.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Articulo\Nuevo.cshtml" />
+    <Content Include="Views\Shared\_LayoutExtranet.cshtml" />
+    <Content Include="Views\Carrito\ListaArticulo.cshtml" />
+    <Content Include="Views\Carrito\Bienvenida.cshtml" />
+    <Content Include="Views\Carrito\VerCarrito.cshtml" />
+    <Content Include="Views\Carrito\OpcionPago.cshtml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\3.0Comunes\3.0Comunes.csproj">
+      <Project>{3065fe2d-0362-4d40-a84e-6fb98b73c882}</Project>
+      <Name>3.0Comunes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\3.1Seguridad\3.1Seguridad.csproj">
+      <Project>{503ee266-f699-4a1c-a0f8-5b0a5284d350}</Project>
+      <Name>3.1Seguridad</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\3.2Logistica\3.2Logistica.csproj">
+      <Project>{917ae9a1-8a54-4e0c-aad1-3689df1ba245}</Project>
+      <Name>3.2Logistica</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\3.3Ventas\3.3Ventas.csproj">
+      <Project>{fb0ad716-bf69-4097-aa02-023a475af208}</Project>
+      <Name>3.3Ventas</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\4.0Comunes\4.0Comunes.csproj">
+      <Project>{bbc446ac-7d9c-4d67-a652-c3b8fc37cc40}</Project>
+      <Name>4.0Comunes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\4.1Seguridad\4.1Seguridad.csproj">
+      <Project>{563aab2e-e910-4cde-8276-9b39a0cf36db}</Project>
+      <Name>4.1Seguridad</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\4.2Logistica\4.2Logistica.csproj">
+      <Project>{ff319f63-c583-418e-bd84-62570cf2556b}</Project>
+      <Name>4.2Logistica</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\4.3Ventas\4.3Ventas.csproj">
+      <Project>{3f93d2ad-31fa-4c71-ac68-02db6445f7f0}</Project>
+      <Name>4.3Ventas</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>54402</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:54402/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
