@@ -10,6 +10,8 @@ namespace _3._0Comunes
 {
     public class logUbigeo
     {
+        //HOLAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+
         #region singleton
         private static readonly logUbigeo _instancia = new logUbigeo();
         public static logUbigeo Instancia {
