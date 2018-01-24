@@ -19,7 +19,7 @@ namespace _1._1Escritorio
 
         private void Form2_Load(object sender, EventArgs e)
         {
-
+            //hola como estas
         }
     }
 }
